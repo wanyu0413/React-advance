@@ -94,7 +94,9 @@ const Login = (props) => {
     if (formIsValid) {
       authCtx.onLogin(emailState.value, passwordState.value);
     } else if (!emailIsValid) {
+      emailInputRef.current.focus();
     } else {
+      passwordInputRef.current.focus();
     }
   };
 
